@@ -1,0 +1,206 @@
+/*
+Filename: style.css
+Date: 15 Mar 15
+Programmer: Jaymes Young-Liebgott
+*/
+
+
+/* Set box sizing to border-box */
+div, header, footer, section, article, main, nav, aside, h1, h2, h3, h4, h5,h6, p, blockquote, form{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: arial, helvetica, sans-serif;
+}
+
+body {
+    margin:0;
+    background: #fff;
+}
+h1 {
+    color: #90ab75;
+    font-weight: normal;
+}
+h1, h2, h3 {
+    font-weight: normal;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+h2 { 
+    color: #5D6B0E;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+h3 { 
+    color: #5D6B0E;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #6B7F57;
+    font-size: 1em;
+}
+
+a, a:visited {
+    text-decoration:none;
+    color: #5D6B0E;
+}
+
+a:hover {
+    color: #fff;
+    background: #68BD12;
+}
+
+header {
+    background:#D7FFAE;
+}
+
+nav{
+    display: inline-block;
+    width: 180px;
+    vertical-align: top;
+}
+
+nav ul{
+    width: 140px;
+    padding: 0px;
+    padding-top: 20px;
+    list-style-position: inside;
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+nav li {
+    width: 120px;
+    height: 30px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    width: 118px;
+    height: 28px;
+    line-height: 30px;
+    color: #3D6B0E;
+    border: 1px solid #3D6B0E;
+    border-radius: 50px 0 50px 0;
+}
+
+nav li a#selected {
+    background: #68BD12;
+    color: #fff;
+}
+
+nav li a:hover {
+    background: #3D6B0E;
+}
+
+main {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    width: 844px;
+    
+}
+
+main ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0 0 10px 0;
+    color: #6B7F57;
+}
+
+main ul li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom:10px;
+    color: #3D6B0E;
+    border-top: 1px solid #68BD12;
+    border-bottom: 1px solid #68BD12;
+    font-size: 0.75em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+#wrapper { 
+    width: 1024px;
+    margin: 0 auto;
+}
+
+#quiz {
+    margin: auto;
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+    #wrapper {
+        width: 100%;
+    }
+    
+    nav {
+        width: 17.57812%;
+    }
+    
+    main {
+        width: 82.42187%;
+    }
+}
+
+/* Phone Styles */
+@media only all and (max-width: 768px) {
+    header {
+        margin-bottom: 5px;
+    }
+    
+    nav {
+        width: 100%;
+        display: block;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    
+    nav ul{
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        padding: 0;
+    }
+    
+    nav ul li{
+        display: inline-block;
+        text-align: center;
+        margin-bottom:3px;
+        padding: 0px;
+        width: 90px; 
+        
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+    
+    main {
+        display: block;
+        padding: 0 10px;
+        width: 100%;
+    }
+    
+    #wrapper {
+        width: 100%;
+    }
+}

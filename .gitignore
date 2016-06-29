@@ -1,1 +1,7 @@
+# netbeans files
 /nbproject/private/
+
+# vendor files
+vendor
+
+.htaccess

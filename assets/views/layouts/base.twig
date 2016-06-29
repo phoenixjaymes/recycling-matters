@@ -7,14 +7,11 @@ Programmer: Jaymes Young-Liebgott
 -->
 
 <html lang="en">
-    
     <head>
-        
         <title>Recycling Matters</title>
-        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
-        
+        {% block adobe %}
         <!--Adobe Edge Runtime-->
             <meta http-equiv="X-UA-Compatible" content="IE=Edge">
             <script type="text/javascript" charset="utf-8" src="http://animate.adobe.com/runtime/5.0.1/edge.5.0.1.min.js"></script>
@@ -32,7 +29,7 @@ Programmer: Jaymes Young-Liebgott
             }, {"dom":{}}, {"dom":{}});
             </script>
         <!--Adobe Edge Runtime End-->
-        
+        {% endblock adobe %}
         <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
         <link href="assets/css/styles.css" rel="stylesheet">
         <meta name="description" content="Recycling matters, facts and tips about reusing, reducing and recycling our planets limited resources. Learn about reducing waste.">
@@ -41,39 +38,19 @@ Programmer: Jaymes Young-Liebgott
     
     <body>
         <div id="wrapper">     
-            <header>              
-		<div id="Stage" class="EDGE-22688831">
-                    <div id="Stage_txtRecycle" class="edgeLoad-EDGE-22688831">Recycle</div>
-                    <div id="Stage_txtReuse" class="edgeLoad-EDGE-22688831">Reuse</div>
-                    <div id="Stage_txtReduce" class="edgeLoad-EDGE-22688831">Reduce</div>
-                    <h1 id="Stage_txtRecyclingMatters" class="edgeLoad-EDGE-22688831">Recycling Matters</h1>
-                    <div id="Stage_imgRecycle" class="edgeLoad-EDGE-22688831"></div>
-                </div>
-                
+            <header>
+                {% block header %}
+                {% endblock header %}
             </header>
             
             <nav>
-                <ul>
-                    <li><a href="index.html" title="Home" id="selected">Home</a></li>
-                    <li><a href="reduce.html" title="Reduce">Reduce</a></li>
-                    <li><a href="reuse.html" title="Reuse">Reuse</a></li>
-                    <li><a href="recycle.html" title="Recycle">Recycle</a></li>
-                    <li><a href="quiz.html" title="Quiz">Quiz</a></li>
-
-                </ul>
+                {{ include('partials/main-nav.twig') }}
             </nav><main>
-                
-                <h2>Recycling Really does Matter</h2>
-                
-                
-                <p>Recycling is a process to change waste materials into new products to prevent waste of potentially useful materials, reduce the consumption of fresh raw materials, reduce energy usage, reduce air pollution and water pollution by reducing the need for "conventional" waste disposal, and lower greenhouse gas emissions as compared to plastic production. Recycling is a key component of modern waste reduction and is the third component of the "Reduce, Reuse and Recycle" waste hierarchy. - <a href="http://en.wikipedia.org/wiki/Recycling">Wikipedia</a></p>
-                <p>Recycling helps the planet by reducing the amount of waste that goes into landfills. It also reduces the amount of natural resources used by reducing the amount of resources needed. We can even reduce the amount of recycling we do if we reuse and reduce the amount of waste we create.</p>
-                
+                {% block content %}
+                {% endblock content %}
                 <footer>
-                    <small>&copy; 2015</small>
-                    <br><a href="index.html">Home</a> &nbsp;|&nbsp; <a href="reduce.html">Reduce</a> &nbsp;|&nbsp; <a href="reuse.html">Reuse</a> &nbsp;|&nbsp; <a href="recycle.html">Recycle</a> &nbsp;|&nbsp; <a href="quiz.html">Quiz</a>
-                </footer>
-                
+                    {{ include('partials/footer.twig') }}
+                </footer> 
             </main>
         </div>  
     </body>  

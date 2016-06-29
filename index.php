@@ -39,19 +39,19 @@ $app->get('/', function ($request, $response, $test) {
 })->setName('home');
 
 $app->get('/reduce', function ($request, $response) {
-    $this->view->render($response, 'about.twig', ['pageName' => 'reduce']);
+    $this->view->render($response, 'reduce.twig', ['pageName' => 'reduce']);
 })->setName('reduce');
 
 $app->get('/reuse', function ($request, $response) {
-    $this->view->render($response, 'work.twig', ['pageName' => 'reuse']);
+    $this->view->render($response, 'reuse.twig', ['pageName' => 'reuse']);
 })->setName('reuse');
 
 $app->get('/recycle', function ($request, $response) {
-    $this->view->render($response, 'work.twig', ['pageName' => 'recycle']);
+    $this->view->render($response, 'recycle.twig', ['pageName' => 'recycle']);
 })->setName('recycle');
 
 $app->get('/quiz', function ($request, $response) {
-    $this->view->render($response, 'work.twig', ['pageName' => 'quiz']);
+    $this->view->render($response, 'quiz.twig', ['pageName' => 'quiz']);
 })->setName('quiz');
 
 // Run app

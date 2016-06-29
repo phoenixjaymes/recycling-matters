@@ -1,1 +1,10 @@
-{# empty Twig template #}
+{# Main navigation #}
+<ul>
+    <li><a href="{{ path_for('home') }}" title="Home" id="selected">Home</a></li>
+    <li><a href="{{ path_for('reduce') }}" title="Reduce">Reduce</a></li>
+    <li><a href="{{ path_for('reuse') }}" title="Reuse">Reuse</a></li>
+    <li><a href="{{ path_for('recycle') }}" title="Recycle">Recycle</a></li>
+    <li><a href="{{ path_for('quiz') }}" title="Quiz">Quiz</a></li>
+</ul>
+
+{# {{ path_for('home') }}" {% if pageName == 'home' %}class="current"{% endif %} #}

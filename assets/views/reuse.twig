@@ -1,0 +1,53 @@
+{# reuse template #}
+{% extends "layouts/base.twig" %}
+
+{% block adobe %}
+ <!--Adobe Edge Runtime-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script type="text/javascript" charset="utf-8" src="http://animate.adobe.com/runtime/5.0.1/edge.5.0.1.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-22688831 { visibility:hidden; }
+    </style>
+    <script>
+       AdobeEdge.loadComposition('reuse-banner', 'EDGE-22688831', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "1024px",
+        width: "600px",
+        height: "60px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+<!--Adobe Edge Runtime End-->
+
+<!--Adobe Edge Runtime-->
+
+    <style>
+        .edgeLoad-EDGE-46647745 { visibility:hidden; }
+    </style>
+    <script>
+       AdobeEdge.loadComposition('reuse-ani', 'EDGE-46647745', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0",
+        maxW: "540px",
+        width: "520px",
+        height: "565px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+<!--Adobe Edge Runtime End-->
+{% endblock adobe %}
+
+{% block header %}
+    <div id="Stage" class="EDGE-22688831">
+        <img id="Stage_imgRecycle" class="edgeLoad-EDGE-22688831" alt="Recycling Symbol" src="images/recycle-sym-with-earth-85x83.png"/>
+        <div id="Stage_txtMessage" class="edgeLoad-EDGE-22688831">Americans generated 31 million tons of plastics in 2010<br> about 12 percent of the waste stream</div>
+        <h1 id="Stage_txtRecycling" class="edgeLoad-EDGE-22688831">Recycling Matters</h1>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <h2>Reuse</h2>
+    <p>Reuse: verb - Use again or more than once</p>
+    <div id="reuseGallery" class="EDGE-46647745"></div>
+{% endblock content %}

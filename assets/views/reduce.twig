@@ -1,0 +1,52 @@
+{# reduce template #}
+{% extends "layouts/base.twig" %}
+
+{% block adobe %}
+<!--Adobe Edge Runtime-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script type="text/javascript" charset="utf-8" src="http://animate.adobe.com/runtime/5.0.1/edge.5.0.1.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-22688831 { visibility:hidden; }
+    </style>
+    <script>
+       AdobeEdge.loadComposition('reduce-banner', 'EDGE-22688831', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "1024px",
+        width: "600px",
+        height: "60px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+<!--Adobe Edge Runtime End--> 
+{% endblock adobe %}
+
+{% block header %}
+<div id="Stage" class="EDGE-22688831">
+    <img id="Stage_imgRecycle" class="edgeLoad-EDGE-22688831" alt="Recycling Symbol" src="images/recycle-sym-with-earth-85x83.png"/>
+    <div id="Stage_txtMessage" class="edgeLoad-EDGE-22688831">Paper makes up nearly 30 percent of all wastes<br>Americans throw away each year</div>
+    <h1 id="Stage_txtRecycling" class="edgeLoad-EDGE-22688831">Recycling Matters</h1>
+</div>
+{% endblock header %}
+
+{% block content %}
+    <h2>Reduce</h2>
+    <p>Reduce: verb - Make smaller or less in amount, degree, or size</p>
+    <h3>Ways to Reduces</h3>
+
+    <ul>
+        <li>Bring your own bags when shopping.</li>
+        <li>Buy used items. Used items are usually cheaper than new and still just as good. You can purchase clothing, building supplies and even electronics used.</li>
+        <li>Use reusable items instead of disposable. Use clothing napkins at home. Bring your own silverware and cups to work and school.</li>
+        <li>Buy items with less packaging.</li>
+        <li>Get a water filter and a reusable water bottle instead of buying water all the time.</li>
+        <li>Take care of the things you own. If you take care of things you own you won't have to replace them as often. </li>
+        <li>Borrow instead of buying. You can get most book and DVDs at your local library. If you only use powertools and lawn epuipment a few times a year, borrow them. Many cities now have tool share programs.</li>
+        <li>Donate. All sorts of things can be donated. Clothes, books, tools, furniture, electronics, even building supplies can be donated. You may even be able to get a tax deduction for your donation.</li>
+    </ul>
+
+    <p>All of these ideas help to reduce the amount of waste created and the amount of waste that ends up in landfills.</p>
+    <h2>Doctor Ipsum</h2>
+    <p>Well, of course I'm being childish! There's no point being grown-up if you can't be childish sometimes. Hello-o-o-o. Well, my Doctorate is purely honorary and Harry is only qualified to work on sailors. It may be irrational of me, but human beings are my favorite species. You're standing on my scarf. Come on! Are you listening to me? The trouble with computers, of course, is that they're very sophisticated idiots. They do exactly what you tell them at amazing speed. Even if you order them to kill you. So if you do happen to change your mind, it's very difficult to stop them from obeying the original order. But not impossible.</p>
+    <p>There's something else I've always wanted to say: Allons-y, Alonso! Aw, I wanted to be ginger! I've never been ginger! And you, Rose Tyler! Fat lot of good you were! You gave up on me! Ooh, that's rude. Is that the sort of man I am now? Am I rude? Rude and not ginger. River, you know my name. You whispered my name in my ear! There's only one reason I would ever tell anyone my name. There's only one time I could... I'm the Doctor, I can save the world with a kettle and some string! And look! I'm wearing a vegetable!</p>
+{% endblock content %}

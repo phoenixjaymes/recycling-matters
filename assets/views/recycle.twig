@@ -1,0 +1,52 @@
+{# recycle template #}
+{% extends "layouts/base.twig" %}
+
+{% block adobe %}
+ <!--Adobe Edge Runtime-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script type="text/javascript" charset="utf-8" src="http://animate.adobe.com/runtime/5.0.1/edge.5.0.1.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-22688831 { visibility:hidden; }
+    </style>
+    <script>
+       AdobeEdge.loadComposition('recycle-banner', 'EDGE-22688831', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "1024px",
+        width: "600px",
+        height: "60px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+<!--Adobe Edge Runtime End-->
+{% endblock adobe %}
+
+{% block header %}
+    <div id="Stage" class="EDGE-22688831">
+        <img id="Stage_imgRecycle" class="edgeLoad-EDGE-22688831" alt="Recycling Symbol" src="images/recycle-sym-with-earth-85x83.png"/>
+        <div id="Stage_txtMessage" class="edgeLoad-EDGE-22688831">Americans generated 11.5 million tons of glass in 2010<br>about 27 percent of which was recovered for recycling</div>
+        <h1 id="Stage_txtRecycling" class="edgeLoad-EDGE-22688831">Recycling Matters</h1>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <h2>Recycle</h2>
+    <p>Recycle: verb - Convert (waste) into reusable material</p>
+    <h3>Recycling tips</h3>
+
+    <ul>
+        <li>When shopping look for products that can be easily recycled and products that contain recycled content.</li>
+        <li>Sort your home waste and put it in your curbside recycle bins.</li>
+        <li>Many states have plastic bottle deposits so take them them back and get your deposit instead throwing them away.</li>
+
+        <li>Have used motor oil, many auto parts stores accepted used oil.</li>
+        <li>Left over paint can be recycled at many major hardware stores or at recycling centers.</li>
+        <li>Used batteries can also be taken to recycling centers or stores like Batteries Plus.</li>
+        <li>Most garages are required to accept and recycle your used tires when you have new ones installed.</li>
+    </ul>
+
+   <p>Don't have bottle deposits or curb side pick up? Call around or Google "recycling centers near me". A list and a map will show you where to go.</p>
+   <h2>Doctor Ipsum</h2>
+    <p>There's something else I've always wanted to say: Allons-y, Alonso! Aw, I wanted to be ginger! I've never been ginger! And you, Rose Tyler! Fat lot of good you were! You gave up on me! Ooh, that's rude. Is that the sort of man I am now? Am I rude? Rude and not ginger. River, you know my name. You whispered my name in my ear! There's only one reason I would ever tell anyone my name. There's only one time I could... I'm the Doctor, I can save the world with a kettle and some string! And look! I'm wearing a vegetable!</p>
+    <p>Big scarf, bow tie, big embarrassing. Come on, Team Not Dead. Can I talk about planets now? That's a relief. I hate babysitters. No. That is not the question. That is not where we start. Sorry, I'm going to have to relieve you of your pet. Shut up, I was talking to the horse. Why do you have three mirrors? Why don't you just turn your head? I am totally against bantering. I was being chased by a giant dinosaur, but I think I've managed to give it the slip. Oh, you've got a dinosaur too! My carer. She cares so I don't have to.</p>
+{% endblock content %}

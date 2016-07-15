@@ -1,10 +1,8 @@
 {# Main navigation #}
-<ul>
-    <li><a href="{{ path_for('home') }}" title="Home" id="selected">Home</a></li>
-    <li><a href="{{ path_for('reduce') }}" title="Reduce">Reduce</a></li>
-    <li><a href="{{ path_for('reuse') }}" title="Reuse">Reuse</a></li>
-    <li><a href="{{ path_for('recycle') }}" title="Recycle">Recycle</a></li>
-    <li><a href="{{ path_for('quiz') }}" title="Quiz">Quiz</a></li>
+<ul class="nav-menu">
+    <li><a href="{{ path_for('home') }}" {% if pageName == 'home' %}class="current"{% endif %}>Home</a></li>
+    <li><a href="{{ path_for('reduce') }}" {% if pageName == 'reduce' %}class="current"{% endif %}>Reduce</a></li>
+    <li><a href="{{ path_for('reuse') }}" {% if pageName == 'reuse' %}class="current"{% endif %}>Reuse</a></li>
+    <li><a href="{{ path_for('recycle') }}" {% if pageName == 'recycle' %}class="current"{% endif %}>Recycle</a></li>
+    <li><a href="{{ path_for('quiz') }}" {% if pageName == 'quiz' %}class="current"{% endif %}>Quiz</a></li>
 </ul>
-
-{# {{ path_for('home') }}" {% if pageName == 'home' %}class="current"{% endif %} #}

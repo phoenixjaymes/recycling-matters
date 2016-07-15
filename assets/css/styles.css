@@ -3,31 +3,148 @@ Filename: styles.css
 Date: 28 Jun 16
 Programmer: Jaymes Young-Liebgott
 */
-/* Set box sizing to border-box */
-div, header, footer, section, article, main, nav, aside, h1, h2, h3, h4, h5, h6, p, blockquote, form {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: arial, helvetica, sans-serif; }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* GENERIC STYLESHEET */
+/*
+
+BOX-SIZING CHANGE (box-sizing property)
+
+The following CSS changes the default box-sizing of box elements from
+content-box to border-box.
+
+border-box automatically includes border *and* padding sizes into your
+box property widths. No more subtracting padding and border sizes from
+your box widths! Now you can use responsive grids without fear of 
+making your columns too wide and causing that annoying left-right
+scroll bar at the bottom of the page.
+
+Remember: this does not take margins into account since margins are 
+not technically part of the box. For those, you will still have to 
+do some subtraction. 
+
+*/
+* {
+  box-sizing: border-box; }
+
+/*
+
+TEXT RENDERING (text-rendering property)
+
+Some fonts are built to handle certain combinations of lettering through
+the use of something called ligatures. For instance, the letters "fi" in
+a serif font can look odd if the top curve of the f runs into the dot of
+the i next to it. A ligature styles them both beautifully. Your browser
+generally does this for you but not on font sizes smaller than 20pt. This
+text-rendering code changes that. This one is entirely optional and you
+can remove this first line if you're not comfortable with it.
+
+
+FONT SMOOTHING (font-smoothing property)
+
+At this point in time, the font smoothing your browser does by default
+is imperfect and makes the font too thick. Using font-smoothing in CSS is
+subtle on a standard display but impressive in a high-definition display.
+There are two declarations to cover usage in Webkit and Mozilla browsers.
+
+*/
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*
+
+USE IMAGES, EMBEDS AND OBJECTS FREELY WITHOUT WORRYING ABOUT SIZES AND
+BREAKING YOUR LAYOUTS (max-width property)
+
+The following ensures that images and embedded content you add can't be 
+wider than the box element they are currently in. This is important for 
+responsive design, as this allows you to use images without having to 
+specify width and height attributes in the HTML.
+
+*/
+img, embed, object {
+  max-width: 100%; }
+
+/*
+
+DEFAULT BEHAVIOR OF SELECTED HYPERLINKS (outline property)
+
+No more ugly dotted outlines on your active links. This is not very 
+noticeable until it's pointed out, but it makes for a cleaner user
+experience.
+
+*/
+a {
+  outline: none; }
 
 body {
   margin: 0;
-  background: #fff; }
+  background-color: #fff;
+  color: #6b7f57;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.3; }
 
 h1 {
-  color: #90ab75;
   font-weight: normal; }
 
 h1, h2, h3 {
   font-weight: normal;
-  font-family: 'Alfa Slab One', cursive; }
+  font-family: 'Alfa Slab One', cursive;
+  color: #6b7f57; }
 
-h2 {
-  color: #5D6B0E;
+h1, h2 {
   font-size: 1.4em;
   letter-spacing: 1px; }
 
 h3 {
-  color: #5D6B0E;
   font-size: 1em;
   letter-spacing: 1px; }
 
@@ -36,132 +153,107 @@ h2, h3, p {
   margin-bottom: 15px; }
 
 p {
-  color: #6B7F57;
   font-size: 1em; }
 
-a, a:visited {
-  text-decoration: none;
-  color: #5D6B0E; }
-
-a:hover {
-  color: #fff;
-  background: #68BD12; }
-
-header {
-  background: #D7FFAE; }
-
-nav {
-  display: inline-block;
-  width: 180px;
-  vertical-align: top; }
-
-nav ul {
-  width: 140px;
-  padding: 0px;
-  padding-top: 20px;
-  list-style-position: inside;
-  list-style-type: none;
-  margin: 0 auto; }
-
-nav li {
-  width: 120px;
-  height: 30px;
-  padding-bottom: 5px;
-  padding-left: 10px; }
-
-nav li a {
-  display: block;
-  text-align: center;
-  width: 118px;
-  height: 28px;
-  line-height: 30px;
-  color: #3D6B0E;
-  border: 1px solid #3D6B0E;
-  border-radius: 50px 0 50px 0; }
-
-nav li a#selected {
-  background: #68BD12;
-  color: #fff; }
-
-nav li a:hover {
-  background: #3D6B0E; }
-
-main {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px 10px 10px;
-  width: 844px; }
-
-main ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  padding: 0 0 10px 0;
-  color: #6B7F57; }
-
-main ul li {
-  margin-bottom: 5px; }
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #5d6b0e; }
+  a:hover, a:active {
+    color: #fff;
+    background: #68BD12; }
 
 footer {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #3D6B0E;
-  border-top: 1px solid #68BD12;
-  border-bottom: 1px solid #68BD12;
-  font-size: 0.75em; }
+  font-size: 0.75em;
+  text-align: center; }
 
 strong {
   font-weight: bold; }
 
-#wrapper {
-  width: 1024px;
-  margin: 0 auto; }
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap; }
+  @media (min-width: 769px) {
+    .wrapper {
+      flex-flow: row wrap; } }
+
+.main-nav {
+  margin-bottom: 20px; }
+  @media (min-width: 769px) {
+    .main-nav {
+      flex: 0 1 160px; } }
+
+.main-content {
+  flex: 1 1;
+  position: relative; }
+
+@media (min-width: 769px) {
+  .main-footer {
+    flex: 0 0 100%; } }
+
+.primary-content, .secondary-content {
+  margin-bottom: 20px;
+  padding: 0 20px; }
+
+.main-header {
+  background: #d7ffae;
+  margin-bottom: 20px; }
+
+.nav-menu {
+  margin: 0 20px; }
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-top: 1px solid #68bd12;
+  border-bottom: 1px solid #68bd12; }
+
+.nav-menu {
+  text-align: center;
+  margin: auto;
+  padding: 0; }
+  @media (min-width: 769px) {
+    .nav-menu {
+      padding-top: 10px; } }
+
+.nav-menu li {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 0px;
+  width: 90px; }
+  @media (min-width: 769px) {
+    .nav-menu li {
+      width: 120px;
+      padding-bottom: 5px; } }
+
+.nav-menu a {
+  border: 1px solid #3d6b0e;
+  border-radius: 50px 0 50px 0;
+  display: block;
+  font-weight: bold;
+  transition: all .3s ease-out; }
+  @media (min-width: 769px) {
+    .nav-menu a {
+      height: 40px;
+      line-height: 40px; } }
+  .nav-menu a:link, .nav-menu a:visited {
+    color: #3d6b0e; }
+  .nav-menu a:hover, .nav-menu a:active {
+    background: #3d6b0e;
+    color: #fff; }
+  .nav-menu a.current {
+    background-color: #68bd12;
+    color: #fff; }
+
+.info {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 0 0 10px 0; }
+
+.info li {
+  margin-bottom: 5px; }
 
 #quiz {
   margin: auto; }
 
-/* Tablet Styles */
-@media only screen and (max-width: 1024px) {
-  #wrapper {
-    width: 100%; }
-
-  nav {
-    width: 17.57812%; }
-
-  main {
-    width: 82.42187%; } }
-/* Phone Styles */
-@media only all and (max-width: 768px) {
-  header {
-    margin-bottom: 5px; }
-
-  nav {
-    width: 100%;
-    display: block;
-    padding: 0;
-    margin-bottom: 10px; }
-
-  nav ul {
-    text-align: center;
-    margin: auto;
-    width: 90%;
-    padding: 0; }
-
-  nav ul li {
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 3px;
-    padding: 0px;
-    width: 90px; }
-
-  nav ul li a {
-    display: block;
-    width: 100%; }
-
-  main {
-    display: block;
-    padding: 0 10px;
-    width: 100%; }
-
-  #wrapper {
-    width: 100%; } }
+/*# sourceMappingURL=styles.css.map */

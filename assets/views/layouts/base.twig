@@ -37,21 +37,25 @@ Programmer: Jaymes Young-Liebgott
     </head>
     
     <body>
-        <div id="wrapper">     
-            <header>
-                {% block header %}
-                {% endblock header %}
-            </header>
-            
-            <nav>
+        <header class="main-header">
+            {% block header %}
+            {% endblock header %}
+        </header>
+        
+        <div class="wrapper">
+            <nav class="main-nav">
                 {{ include('partials/main-nav.twig') }}
-            </nav><main>
+            </nav>
+            
+            <main class="main-content">
                 {% block content %}
                 {% endblock content %}
-                <footer>
-                    {{ include('partials/footer.twig') }}
-                </footer> 
             </main>
-        </div>  
+            
+            <footer class="main-footer">
+                {{ include('partials/footer.twig') }}
+            </footer>
+        </div>
+            
     </body>  
 </html>
